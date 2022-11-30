@@ -1,7 +1,7 @@
 print("hello world")
 
 
-question = input("which question would you like? 10 / 11 / 12 /13 ")
+question = input("which question would you like? 10 / 11 / 12 / 13a / 13b ")
 if question == "11":
     direction = input("up or down ")
 
@@ -44,8 +44,16 @@ if question == "12":
         invite = input("would you like to invite anyone else? ")
     print(f"{len(names)} have been invited")
     print(names)
+if question == "13a":
+    value=input("whats your first number bro? ")
+    while value not in range(1,6):
+        print(f"{value} isn't valid, please try again. ")
+        value=int(input("whats your number bro? "))
+        if value in range(1,6):
+            print(f"Yey numbers I like include: {value}")
+            break
 
-if question == "13":
+if question == "13b":
     while True:
         try:
             value=int(input("whats your number bro? "))
